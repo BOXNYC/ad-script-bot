@@ -13,42 +13,43 @@
     </a>
     <h1>Ad Script Bot</h1>
     <p>Zerp, I'm an advertising script writer for TV commercials. I'm also private, enter the username and password so we can start working together.</p>
-    <form>
-      <fieldset>
-        <legend>Login</legend>
-        <label>Username</label>
-        <input type="text" placeholder="Username…">
-        <input type="password" placeholder="Password…">
-        <button type="submit" class="btn">Submit</button>
-      </fieldset>
-    </form>
   </div>
 </div>
 <div class="container">
-  <form class="row">
+  <% if (!authenticated) { %><form class="row" method="get">
+    <fieldset>
+      <legend>Login</legend>
+      <label>Username</label>
+      <input type="text" name="user[username]" placeholder="Username…" value="<%= user.username %>">
+      <input type="password" name="user[password]" placeholder="Password…">
+      <button type="submit" class="btn">Submit</button>
+    </fieldset>
+  </form><%} else { %>
+  <form class="row" method="get">
     <div class="col-md-6">
-        <fieldset>
-          <legend>Twitter</legend>
-          <label>Handle</label>
-          <input type="text" name="data[twitter][handle]" placeholder="@handle…">
-          <label>Hashtag</label>
-          <input type="text" name="data[twitter][hashtag]" placeholder="#hashtag…">
-        </fieldset>
-      </form>
+      <fieldset>
+        <legend>Twitter</legend>
+        <label>Handle</label>
+        <input type="text" name="twitter[handle]" placeholder="@handle…" value="<%= twitter.handle %>">
+        <label>Hashtag</label>
+        <input type="text" name="twitter[hashtag]" placeholder="#hashtag…" value="<%= twitter.hashtag %>">
+      </fieldset>
     </div>
     <div class="col-md-6">
-      <form>
-        <fieldset>
-          <legend>Instagram</legend>
-          <label>Handle</label>
-          <input type="text" name="data[instagram][handle]" placeholder="@handle…">
-          <label>Hashtag</label>
-          <input type="text" name="data[instagram][hashtag]" placeholder="#hashtag…">
-        </fieldset>
-   <div class="col-md-12">
-     <button type="submit" class="btn">Submit</button>
-   </div>
-   </form><!-- row -->
+      <fieldset>
+        <legend>Instagram</legend>
+        <label>Handle</label>
+        <input type="text" name="instagram[handle]" placeholder="@handle…" value="<%= instagram.handle %>">
+        <label>Hashtag</label>
+        <input type="text" name="instagram[hashtag]" placeholder="#hashtag…" value="<%= instagram.hashtag %>">
+      </fieldset>
+    </div>    
+    <div class="col-md-12">
+      <input type="hidden" name="user[username]" value="<%= user.username %>"></input>
+      <input type="hidden" name="user[password]" value="<%= user.password %>"></input>
+      <button type="submit" class="btn">Submit</button>
+    </div>
+  </form><% } %>
 </div>
 
 
