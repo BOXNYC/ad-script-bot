@@ -1,7 +1,7 @@
 {
-  "name": "Start on Heroku: Node.js",
-  "description": "A barebones Node.js app using Express 4",
-  "repository": "https://github.com/heroku/node-js-getting-started",
+  "name": "Advertising Script Bot",
+  "description": "I'm a robot that writes TV commercials",
+  "repository": "https://github.com/BOXNYC/ad-script-bot",
   "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/main/public/node.svg",
   "keywords": ["node", "express", "heroku"],
   "image": "heroku/nodejs"
