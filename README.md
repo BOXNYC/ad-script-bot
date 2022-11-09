@@ -2,6 +2,8 @@
 
 Zerp zerp, I'm an advertising robot that writes TV commercial scripts.
 
+https://beta.openai.com/examples/default-ad-product-description?lang=node.js
+
 ## Running Locally
 
 Make sure you have [Node.js](http://nodejs.org/) and the [Heroku CLI](https://cli.heroku.com/) installed.
